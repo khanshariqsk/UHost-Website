@@ -1,16 +1,23 @@
-.parent {
-	padding: 20px;
-	border:2px solid black;
-	background: yellow;
-	text-align:center;
+html {
+	height: 100%;
 }
-.parent div{
-display: inline-block;
-width:100px;
-height: 100px;
-border-radius: 50%;
-border:1px solid black;
-background: green; 
-margin: 0 10%;
+body {
+	height: 100%;
+}
+.main__parent {
+	height:400px;
+	width: 400px; 
+	text-align: center;
 
+}
+.parent {
+	height:200px;
+	width:200px;
+	background: yellow;
+	display: inline-block;
+	vertical-align: middle;
+	position: fixed;
+	top: 0;
+	left:0;
+	/*float: right;*/
 }
