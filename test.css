@@ -1,23 +1,15 @@
-html {
-	height: 100%;
-}
-body {
-	height: 100%;
-}
 .main__parent {
-	height:400px;
-	width: 400px; 
+	width:500px;
+	height:500px;
+	border:2px solid red ;
 	text-align: center;
 
 }
 .parent {
-	height:200px;
 	width:200px;
-	background: yellow;
+	height: 200px;
+	background:blue;
+	/* margin:auto; */
+	vertical-align:middle;
 	display: inline-block;
-	vertical-align: middle;
-	position: fixed;
-	top: 0;
-	left:0;
-	/*float: right;*/
 }
