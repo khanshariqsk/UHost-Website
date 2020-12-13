@@ -1,15 +1,20 @@
-.main__parent {
-	width:500px;
-	height:500px;
-	border:2px solid red ;
+.main-customer{
+	border:2px solid red;
+	padding: 1rem;
 	text-align: center;
+	display: inline-block;
+	width: 100%;
+	box-sizing: border-box;
 
 }
-.parent {
-	width:200px;
-	height: 200px;
-	background:blue;
-	/* margin:auto; */
-	vertical-align:middle;
-	display: inline-block;
+.main-customer__lists {
+	list-style: none;
+	border:2px solid red; 
+
+}
+.main-customer__list {
+	margin: 1rem;
+	/*display: inline-block;*/
+	display: block;
+
 }
