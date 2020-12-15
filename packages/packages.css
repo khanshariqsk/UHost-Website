@@ -91,3 +91,15 @@
 	border-color:#ff5454;
 	box-shadow: 2px 2px 3px black;
 }
+@media (min-width:40rem) {
+	main {
+	max-width: 1000px;
+	}
+}
+@media (min-width:62.5rem) {
+	.plus-plan,
+	.free-plan,
+	.premium-plan {
+		border:0.25rem solid #0e4f1f;
+	}
+}

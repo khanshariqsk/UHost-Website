@@ -6,6 +6,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
+main{
+    min-height: calc(100vh - 56px - 132.6px);
+    margin-top: 3.5rem;
+
+}
 .backdrop {
   background: rgba(0,0,0,0.5);
   position: fixed;
@@ -43,6 +48,8 @@ body {
     height: 2.5rem;
     display: inline-block;
     vertical-align: middle;
+    
+   
 }
 .main-header__brand img {
   /*  height: 40px;
@@ -52,10 +59,12 @@ body {
 }
 
 .main-nav {
-    display: inline-block;
+    /* display: inline-block; */
+    display:none;
     text-align: right;
     width: calc(100% - 124px);
     vertical-align: middle;
+   
 }
 
 .main-nav__items {
@@ -99,6 +108,12 @@ body {
     color: #ff1b68;
     background: white;
     border: none;
+}
+
+@media (min-width:40rem){
+    .main-nav {
+        display: inline-block;
+    }
 }
 
 .mobile-nav {
@@ -170,6 +185,11 @@ body {
 .toggle-button:focus {
     outline: none
 }
+@media (min-width:40rem) {
+    .toggle-button {
+        display: none;
+    }
+}
 
 .footer {
 	background: black;
@@ -178,11 +198,18 @@ body {
 }
 .footer-nav__links{
 	text-align: center;
-	list-style: none;
+    list-style: none;
+    padding:0;
 }
 .footer-nav__link{
-	display: inline-block;
-	margin: 0 1.25rem;
+	/* display: inline-block; */
+	margin:0.8rem 0;
+}
+@media(min-width:40rem){
+    .footer-nav__link{
+        display: inline-block;
+        margin:0 1rem;
+    }
 }
 .footer-nav__link__anchor {
 	text-decoration:none;
