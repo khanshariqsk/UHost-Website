@@ -1,48 +1,45 @@
-var backdrop = document.querySelector('.backdrop')
-var selectButtonPlans = document.querySelectorAll('.plan button')
-var modal = document.querySelector('.modal')
-var modalNoButton = document.querySelector('.modal__action--negative')
-var toggleBar = document.querySelector('.toggle-button')
-var mobileNav = document.querySelector('.mobile-nav')
-var mobileNavCancelButton = document.querySelector('.mobile-nav__button')
+var backdrop = document.querySelector(".backdrop");
+var modal = document.querySelector(".modal");
+var modalNoButton = document.querySelector(".modal__action--negative");
+var selectPlanButtons = document.querySelectorAll(".plan button");
+var toggleButton = document.querySelector(".toggle-button");
+var mobileNav = document.querySelector(".mobile-nav");
 
+// console.dir(backdrop.style['background-image']);
 
-
-
-function showBackdrop() {
-    backdrop.style.display = "block";
-    // modal.classList.add('open') we can also use this approach to add class dynamically
-    if(modal){
-    	modal.style.display = "block";
-    }
+// console.dir(backdrop);
+for (var i = 0; i < selectPlanButtons.length; i++) {
+  selectPlanButtons[i].addEventListener("click", function() {
+    // modal.style.display = "block";
+    // backdrop.style.display = "block";
+    // modal.className = 'open'; // This will actually overwrite the complete class list
+    modal.classList.add("open");
+    backdrop.classList.add("open");
+  });
 }
-function closeFunction(){
-    backdrop.style.display = "none";
-	if(modal){
-    	modal.style.display = "none";
-	    // modal.classList.remove('open'); we can also use this approach to remove class dynamically
-	}
-	mobileNav.style.display="none";
 
-} 
-function toggleOn(){
-	mobileNav.style.display="block";
-    backdrop.style.display = "block";
+backdrop.addEventListener("click", function() {
+  // mobileNav.style.display = 'none';
+  mobileNav.classList.remove("open");
+  closeModal();
+});
 
+if (modalNoButton) {
+  modalNoButton.addEventListener("click", closeModal);
 }
-selectButtonPlans.forEach((btn)=>{
-    btn.addEventListener('click',showBackdrop)
-})
 
-
-backdrop.addEventListener('click',closeFunction)
-
-if(modalNoButton){
-	modalNoButton.addEventListener('click',closeFunction)
+function closeModal() {
+  //   backdrop.style.display = "none";
+  //   modal.style.display = "none";
+  if (modal) {
+    modal.classList.remove("open");
+  }
+  backdrop.classList.remove("open");
 }
-toggleBar.addEventListener('click',toggleOn)
 
-mobileNav.addEventListener('click',closeFunction)
-
-mobileNavCancelButton.addEventListener('click',closeFunction)
-
+toggleButton.addEventListener("click", function() {
+  // mobileNav.style.display = 'block';
+  // backdrop.style.display = 'block';
+  mobileNav.classList.add("open");
+  backdrop.classList.add("open");
+});
