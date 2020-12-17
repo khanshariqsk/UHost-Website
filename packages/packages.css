@@ -54,6 +54,8 @@ main {
     font-size: 1.2rem;
     color: #0e4f1f;
     background: white;
+    line-height: 2rem;	
+    /*text-transform:lowercase;*/
 }
 
 .clearfix {
