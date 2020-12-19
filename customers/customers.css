@@ -4,6 +4,8 @@ main {
 
 .testimonial {
     font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
   }
   
   /*.testimonial__list {
@@ -65,17 +67,16 @@ main {
     .testimonial {
       margin: 3rem auto;
       max-width: 1500px;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
     }
 
     .testimonial__image-container {
-      display: inline-block;
-      vertical-align: middle;
       width: 66%;
     }
 
     .testimonial__info {
-      display: inline-block;
-      vertical-align: middle;
       width: 30%;
     }
     
