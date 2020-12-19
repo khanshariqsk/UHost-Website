@@ -38,15 +38,31 @@
 
 .section-title {
   color: #2ddf5c;
-  text-align: center;
+  /*text-align: center;*/
+}
+#plans {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+
+}
+.plan__list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .plan {
   background: #d5ffdc;
-  text-align: center;
+  /*text-align: center;*/
   padding: 1rem;
   margin: 0.5rem 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*justify-content: space-between;*/
+
 }
 
 .plan--highlighted {
@@ -64,10 +80,16 @@
 
 .plan__title {
   color: #0e4f1f;
+  margin: 0.5rem 0;
 }
 
 .plan__price {
   color: #858585;
+  margin: 0.5rem 0;
+}
+.plan__price + h3 {
+  margin: 0.5rem 0;
+  text-align: center;
 }
 
 .plan--highlighted .plan__title {
@@ -82,6 +104,9 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .plan__feature {
@@ -90,20 +115,25 @@
 
 @media (min-width: 40rem) {
   .plan__list {
-    width: 100%;
-    text-align: center;
+   /* width: 100%;
+    text-align: center*/;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .plan {
-    display: inline-block;
+    /*display: inline-block;*/
     width: 30%;
-    vertical-align: middle;
+    /*vertical-align: middle;*/
     min-width: 13rem;
     max-width: 25rem;
+    height: 25rem;
   }
 
   .plan--highlighted {
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    height: 28rem;
   }
 }
 
@@ -111,18 +141,33 @@
   background: #ff1b68;
   margin-top: 5rem;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #key-features .section-title {
   color: white;
   margin: 2rem;
+  text-align: center;
 }
 
 .key-feature__list {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center;
+  /*text-align: center;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+.key-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .key-feature__image {
@@ -131,7 +176,7 @@
   height: 128px;
   border: 2px solid #424242;
   border-radius: 50%;
-  margin: auto;
+  /*margin: auto;*/
   padding: 1.5rem;
 }
 
@@ -143,11 +188,17 @@
 }
 
 @media (min-width: 40rem) {
+  .key-feature__list {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
   .key-feature {
-    display: inline-block;
+    /*display: inline-block;*/
     width: 30%;
     max-width: 25rem;
-    vertical-align: top;
+    /*vertical-align: top;*/
+
   }
 }
 
