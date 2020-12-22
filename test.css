@@ -1,27 +1,17 @@
 .container {
-    margin: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 15rem);
-    justify-content: center;
-    align-content: center;
-    grid-gap: 1.5rem;
-    height: 800px;
-   /* grid-auto-rows: minmax(8rem, auto);
-    grid-auto-flow: row;
-    grid-auto-columns: 5rem;*/
-    /*grid-auto-flow: column;*/
+  height: 200px;
+  width: 200px;
+  /* background:yellowgreen; */
+  border: 2px solid black;
+  margin:200px auto;
+  perspective:500px;
+  perspective-origin: ;
 }
-
-.quote {
-  border: 1px solid #fa923f;
-  background: #ffbd87;
-  font-family: sans-serif;
-  padding: 1rem;
-  border-radius: 5px;
-}
-
-.quote--featured {
-  border: #ff4213;
-  background: #ff9f87;
-  grid-column: span 2;
+.box {
+  height:100%;
+  width:100%;
+  transform: rotateY(60deg);
+  background:green;
+  text-align: center;
+  font-size:3rem
 }

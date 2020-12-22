@@ -4,6 +4,8 @@ main {
 
 .signup-form {
     padding: 1rem;
+    display:grid;
+    grid-row-gap: 0.5rem;;
 }
 .signup-form label {
     font-weight: bold;
@@ -17,8 +19,8 @@ main {
 .signup-form label,
 .signup-form input,
 .signup-form select {
-    display: block;
-    margin-top: 1rem;
+    /* display: block; */
+    /* margin-top: 1rem; */
     width: 100%;
 }
 .signup-form input:not([type="checkbox"]),
@@ -36,7 +38,7 @@ main {
 
 .signup-form input[type=checkbox],
 .signup-form label[for^=agree]{
-    display: inline-block;
+    /* display: inline-block; */
     width:auto;
 }
 .signup-form input[type=checkbox]{
@@ -48,7 +50,7 @@ main {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    vertical-align:top;
+    vertical-align:middle;
 }
 .signup-form input[type=checkbox]:checked {
     background:#2ddf5c;
@@ -58,15 +60,34 @@ main {
     outline: none;
 }
 .signup-form button[type=submit] {
-    margin-top: 1rem;;
-    display: block;
-    /* width: auto; */
+    /* margin-top: 1rem;; */
+    /* display: block; */
+    width: auto;
     text-align: center;
     /* float: left; */
 }
 
 @media (min-width:40rem){
     .signup-form {
-        width: 25rem;
+        width: 30rem;
         margin:auto;
+        grid-template-columns:10rem auto;
+        grid-row-gap: 1.5rem;
+
+    }
+    .signup-form .article {
+        grid-column: span 2;
+    }
+    .signup-form label {
+        align-self: center;
+    }
+    .signup-form select {
+        grid-column: span 2;
+    }
+    .signup-form label[for^=agree]{
+        vertical-align:middle; 
+    }
+    /* .signup-form input[type=checkbox] {
+        grid-column: span 2;
+    } */
 }
