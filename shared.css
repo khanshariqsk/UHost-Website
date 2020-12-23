@@ -120,6 +120,10 @@ main {
   border-bottom: 5px solid white;
 }
 
+.main-nav__item--cta {
+  animation:wiggle 200ms 1s 4 none;
+}
+
 .main-nav__item--cta a,
 .mobile-nav__item--cta a {
   color: white;
@@ -249,6 +253,8 @@ main {
 
 .open {
     display: block !important;
+    opacity: 1 !important;
+    transform:translateY(0) !important;
 }
 
 @media (min-width: 40rem) {
@@ -261,5 +267,17 @@ main {
   .main-footer__link {
     /*display: inline-block;*/
     margin: 0 1rem;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform:rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(-10deg)
+  }
+  to {
+    transform:rotateZ(10deg)
   }
 }

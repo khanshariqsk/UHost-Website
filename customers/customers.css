@@ -18,6 +18,9 @@ main {
     max-width: 40rem;
     box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.3);
   }
+  .testimonial__image-container:hover {
+    animation:flip-customer 1s 0s ease-out forwards;
+  }
 
   .testimonial__image {
     width: 100%;
@@ -80,6 +83,15 @@ main {
       width: 30%;
     }
     
+  }
+
+  @keyframes flip-customer {
+    0% {
+      transform: none;
+    }
+    100% {
+      transform: perspective(1000px) rotateY(180deg);
+    }
   }
   
   
